@@ -1,0 +1,24 @@
+<h1>
+  {{title}}
+</h1>
+<!-- il fatto di mettere l'attributo fra parentesi quadre significa che l'espressione assegnata viene prima valutata dal framework e poi assegnata alla proprietà
+se non fosse così alla proprieta senza quadre verrebbe assegnata la semplice stringa tra virgolette ossia l'espressione verrebbe semplicemente considerata una stringa
+e non processata una sintassi equivalente è far precedere la proprietà da bind- es.: bind-articolo 
+per quanto riguarda invece la sintassi evento scrivere (like) o on-like è equivalente
+<articolo bind-articolo="myArticolo" on-like="mostraMessaggioRingraziamento($event)"></articolo>
+-->
+<!--
+  vecchia versione della pagina prima di aggiungere routing
+<articolo [articolo]="myArticolo" (like)="mostraMessaggioRingraziamento($event)"></articolo>
+<p></p>
+<p>form di compilazione articolo:</p>
+<articolo-form (submit)="addArticolo($event)"></articolo-form>
+<articolo-form-reactive></articolo-form-reactive>
+-->
+
+
+	<a routerLink="/">Elenco articoli</a>
+	 <a routerLink="/nuovoArticolo">Aggiungi articolo</a>
+	<router-outlet><router-outlet>
+
+  

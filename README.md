@@ -1,7 +1,3 @@
-# Angular2_example_prj
-un progetto dimostrativo dove troviamo le basi di angular 2
-
-
 #Author:inizio - Luca schiavon
 
 ##documentazione ufficiale angular: https://angular.io/guide/quickstart

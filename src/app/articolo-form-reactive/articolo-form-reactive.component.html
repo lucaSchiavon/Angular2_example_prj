@@ -1,0 +1,21 @@
+<!--questa è una reactive form dove la logica di binding risiede più nel componente che nel markup-->
+<form [formGroup]="myForm">
+  <div>
+    <label for="txtTitolo">Titolo</label>
+    <input type="text" formControlName="txtTitolo">
+   <!-- <span [hidden]="myForm.controls.txtTitolo.valid || myForm.controls.txtTitolo.pristine">Il titolo è obbligatorio e non può superare i 30 caratteri!</span>-->
+  </div>
+  <div>
+    <label for="txtAutore">Autore</label>
+    <input type="text" formControlName="txtAutore">
+  </div>
+  <div>
+    <label for="txtTesto">Testo</label>
+    <textarea formControlName="txtTesto" ></textarea> 
+  </div>
+  <button type="button" (click)="visualizzaArticolo()">Invia</button>
+</form>
+<!--pipe custom trucate.pipe.ts dove è stata definita, per usarla va anche dichiarata a livello di modulo-->
+titolo: {{model.titolo| truncate:5}}<br/>
+autore: {{model.autore}}<br/>
+testo: {{model.testo }}<br/>

@@ -1,0 +1,31 @@
+<h3>{{articolo.titolo}}</h3>
+<i>{{articolo.autore}}</i><br />
+<p>
+	{{articolo.testo}}
+</p>
+<p>
+	Voti: {{articolo.numApprezzamenti}}
+	<button (click)="incrementaApprezzamenti($event)">Mi piace</button>
+
+</p>
+
+	Inserisci un numero:
+	<!-- qui il reference #numero serve per far riferimento ad un elemento in un altro punto dell'interfaccia mentre l'evento keyup esplicitato
+	che non fa nulla serve per refresciare la view, viene esplicitato per far si che angular ricompili la view e la refresci
+una sintassi alternativa di reference è ref-numero -->
+<!--	<input type="number" #numero (keyup)="0" />
+	<div>
+		Il doppio di {{numero.value}}  {{numero.value * 2}}
+	</div> -->
+
+	<!-- angular 2 non ha il two way data binding predefinito per una questione di performance è stato tolto come default, ma si può attivare con al seguente sintassi:
+	
+	-->
+
+	
+	<input type="number" [(ngModel)]="numero" />
+	<div>
+		Il doppio di {{numero}}  {{numero * 2}}
+	</div>
+	
+
